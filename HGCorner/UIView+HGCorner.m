@@ -22,7 +22,7 @@ static NSString * const HGCornerRadiusKey = @"HGCornerRadiusKey";
 
 - (void)setHg_cornerPosition:(HGCornerPosition)hg_cornerPosition
 {
-    objc_setAssociatedObject(self, &HGCornerPositionKey, @(hg_cornerPosition), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, &HGCornerPositionKey, @(hg_cornerPosition), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @dynamic hg_cornerRadius;
@@ -33,7 +33,7 @@ static NSString * const HGCornerRadiusKey = @"HGCornerRadiusKey";
 
 - (void)setHg_cornerRadius:(CGFloat)hg_cornerRadius
 {
-    objc_setAssociatedObject(self, &HGCornerRadiusKey, @(hg_cornerRadius), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, &HGCornerRadiusKey, @(hg_cornerRadius), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 + (void)load
